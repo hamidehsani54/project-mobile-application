@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_login">
+
+    <fragment
+        android:id="@+id/navigation_login"
+        android:name="com.ltu.m7019eblogapp.ui.login.LoginFragment"
+        android:label="@string/title_login"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_LoginFragment_to_HomeFragment"
+            app:destination="@id/navigation_home"
+            app:popUpTo="@id/navigation_home"/>
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ltu.m7019eblogapp.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_CreateFragment"
+            app:destination="@id/navigation_create"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_create"
+        android:name="com.ltu.m7019eblogapp.ui.createpost.CreatePostFragment"
+        android:label="@string/title_create_post"
+        tools:layout="@layout/fragment_create_post" >
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/navigation_specific_post"
+        android:name="com.ltu.m7019eblogapp.ui.post.PostFragment"
+        android:label="@string/navigation_specific_post_label"
+        tools:layout="@layout/fragment_create_post">
+
+        <argument
+            android:name="post"
+            app:argType="com.ltu.m7019eblogapp.model.Post"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.ltu.m7019eblogapp.ui.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_ProfileFragment_to_LoginFragment"
+            app:destination="@+id/navigation_login" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_faq"
+        android:name="com.ltu.m7019eblogapp.ui.faq.FaqFragment"
+        android:label="FAQ"
+        tools:layout="@layout/fragment_faq">
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_to_navigation_specific_post"
+        app:destination="@id/navigation_specific_post"
+        app:enterAnim="@anim/anim_left_to_right"
+        app:popExitAnim="@anim/anim_right_to_left"/>
+
+    <action
+        android:id="@+id/navigation_global_toFaq"
+        app:destination="@id/navigation_faq"
+        app:enterAnim="@anim/nav_default_enter_anim"
+        app:exitAnim="@anim/nav_default_exit_anim" />
+
+    <action
+        android:id="@+id/navigation_global_toProfile"
+        app:destination="@+id/navigation_profile"
+         />
+
+</navigation>

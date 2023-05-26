@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">M7019E Blog app</string>
+    <string name="title_home">Home</string>
+    <string name="title_create_post">Create Post</string>
+    <string name="title_browse">Browse</string>
+    <string name="top_header_title">Home</string>
+
+    <!--
+    Auth0 identifiers and settings
+    ==============================
+    -->
+
+    <!-- Identifiers -->
+    <string name="com_auth0_scheme">app</string>
+
+    <!-- Settings -->
+    <string name="login_scopes">openid profile email read:current_user update:current_user_metadata</string>
+    <string name="login_audience">https://%1$s/api/v2/</string>
+    <!-- Strings related to login -->
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+
+    <!-- SnackBar messages-->
+    <string name="login_success_message">Successfully logged in! %1$s</string>
+    <string name="login_failure_message">Failed to log in. %1$s</string>
+    <string name="general_failure_with_exception_code">Failed - exception code: %1$s</string>
+    <string name="general_success_message">Success!</string>
+    <string name="title_login">Login</string>
+    <string name="title_activity_authenticated">AuthenticatedActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="signing_in">Signing in</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- CREATE POST FORM -->
+    <string name="create_post">CREATE POST</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="media_url">Media (url)</string>
+    <string name="tag">Add tag</string>
+    <string name="category">Category</string>
+    <string name="submit">Submit</string>
+    <string name="navigation_specific_post_label">View Post</string>
+
+    <!-- Nav bar -->
+    <string name="open_nav">Open Navigation Drawer</string>
+    <string name="close_nav">Close Navigation Drawer</string>
+
+</resources>

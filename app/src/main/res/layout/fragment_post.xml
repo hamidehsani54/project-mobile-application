@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="post"
+            type="com.ltu.m7019eblogapp.model.Post" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="?attr/actionBarSize"
+            tools:context=".ui.post.PostFragment">
+
+            <ImageView
+                android:id="@+id/header_image_post"
+                loadImageFromUrl="@{post.media}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="Header image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_post_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:text="@{post.title}"
+                android:textSize="20pt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/header_image_post" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/user_pic_post"
+                android:layout_width="wrap_content"
+                android:layout_height="10pt"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintBottom_toBottomOf="@id/tv_post_author"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_post_author"
+                app:loadImageFromUrl="@{post.user.profilePicture}"
+                app:shapeAppearanceOverlay="@style/circleImageView" />
+
+            <TextView
+                android:id="@+id/tv_post_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:text="@{post.user.username}"
+                android:textSize="10pt"
+                app:layout_constraintStart_toEndOf="@id/user_pic_post"
+                app:layout_constraintTop_toBottomOf="@id/tv_post_title" />
+
+            <TextView
+                android:id="@+id/tv_post_createdAt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="7pt"
+                app:layout_constraintStart_toStartOf="@id/user_pic_post"
+                app:layout_constraintTop_toBottomOf="@id/tv_post_author" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@{post.content}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_post_createdAt" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

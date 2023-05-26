@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn = "@layout/nav_header">
+
+    <group
+        android:id="@+id/top_nav_primary_group"
+        android:checkableBehavior="single">
+
+        <item android:id="@+id/top_nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home"
+            android:checked="true"/>
+
+        <item android:id="@+id/top_nav_profile"
+            android:icon="@drawable/ic_baseline_person_24"
+            android:title="Profile"/>
+
+        <item
+            android:id="@+id/top_nav_faq"
+            android:icon="@drawable/ic_baseline_question_answer_24"
+            android:title="FAQ"/>
+
+    </group>
+
+    <item
+        android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_baseline_logout_24"
+                android:title="Logout"/>
+        </menu>
+    </item>
+
+</menu>
